@@ -48,3 +48,7 @@ export const Content = styled.div`
   align-items: center;
   color: #0d2436;
 `;
+
+export const Title = styled.h4``
+
+export const ContentItems = styled.ul``

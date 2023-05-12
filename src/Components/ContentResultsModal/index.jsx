@@ -1,5 +1,14 @@
 import { useEffect, useMemo } from "react";
-import { Backdrop, Close, Container, Content, Header } from "./styles";
+import {
+  Backdrop,
+  Close,
+  Container,
+  Content,
+  ContentItems,
+  Header,
+  Title,
+} from "./styles";
+import ResultItem from "./components/ResultItem";
 
 const ContentResultsModal = ({ close, selectedNomiees }) => {
   useEffect(() => {
@@ -22,12 +31,12 @@ const ContentResultsModal = ({ close, selectedNomiees }) => {
           <Close onClick={close}>X</Close>
         </Header>
         <Content>
-          <div>SUCCESS!</div>
-          <ul>
+          <Title>SUCCESS!</Title>
+          <ContentItems>
             {itemsSelected.map((item) => (
-              <li key={item[0]}>{`${item[0]}: ${item[1]}`}</li>
+              <ResultItem name={item[0]} title={item[1]} />
             ))}
-          </ul>
+          </ContentItems>
         </Content>
       </Container>
       <Backdrop />
