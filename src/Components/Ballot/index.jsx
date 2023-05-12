@@ -4,7 +4,7 @@ import api from "../../Api/Api";
 import { Button, Container } from "./styles";
 import CategoryContent from "../CategoryContent";
 
-const Ballot = ({ openModal }) => {
+const Ballot = ({ addNomiees }) => {
   const [ballotData, setBallotData] = useState([]);
   const [handleSelectedNomimees, setHandleSelectedNomimees] = useState({});
 
@@ -27,7 +27,7 @@ const Ballot = ({ openModal }) => {
   };
 
   const handleSubmit = () => {
-    openModal(handleSelectedNomimees);
+    addNomiees(handleSelectedNomimees);
   };
 
   useEffect(() => {

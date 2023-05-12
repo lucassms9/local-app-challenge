@@ -43,6 +43,7 @@ export const Close = styled.span`
 
 export const Content = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #0d2436;
